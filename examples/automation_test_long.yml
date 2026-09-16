@@ -1,0 +1,19 @@
+---
+
+* name: Automation Worker - Long Running Execution Test
+  hosts: all
+  gather_facts: false
+
+  tasks:
+
+  * name: Start long-running test
+    ansible.builtin.debug:
+    msg: "Long-running Automation Worker test started."
+
+  * name: Wait for 180 seconds
+    ansible.builtin.pause:
+    seconds: 180
+
+  * name: Report completion
+    ansible.builtin.debug:
+    msg: "Long-running Automation Worker test completed successfully."
