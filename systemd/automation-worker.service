@@ -1,0 +1,30 @@
+[Unit]
+Description=GitLab Ansible Automation Worker
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+
+# Run the Worker using a dedicated non-privileged account.
+
+User=automation
+Group=automation
+
+WorkingDirectory=/opt/gitlab-ansible-automation-worker
+
+EnvironmentFile=/etc/gitlab-ansible-automation-worker/automation-worker.env
+
+ExecStart=/opt/gitlab-ansible-automation-worker/.venv/bin/python 
+/opt/gitlab-ansible-automation-worker/automation_worker.py
+
+Restart=on-failure
+RestartSec=10
+
+# Security hardening
+
+NoNewPrivileges=true
+PrivateTmp=true
+
+[Install]
+WantedBy=multi-user.target
