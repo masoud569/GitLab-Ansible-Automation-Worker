@@ -1,0 +1,33 @@
+# Authorized GitLab Users
+
+#
+
+# Copy this file to:
+
+# authorized_users.yml
+
+#
+
+# Add only GitLab users who are authorized to submit
+
+# and execute automation requests.
+
+authorized_users:
+
+# Example administrator
+
+* gitlab_user_id: 1001
+  username: automation-admin
+  enabled: true
+
+# Example infrastructure operator
+
+* gitlab_user_id: 1002
+  username: infrastructure-operator
+  enabled: true
+
+# Example disabled account
+
+* gitlab_user_id: 1003
+  username: former-operator
+  enabled: false
