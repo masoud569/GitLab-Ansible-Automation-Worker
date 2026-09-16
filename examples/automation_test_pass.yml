@@ -1,0 +1,19 @@
+---
+
+* name: Automation Worker - Successful Execution Test
+  hosts: all
+  gather_facts: false
+
+  tasks:
+
+  * name: Report successful execution
+    ansible.builtin.debug:
+    msg: "Automation Worker test completed successfully."
+
+  * name: Create successful test marker
+    ansible.builtin.set_fact:
+    automation_test_result: "PASS"
+
+  * name: Display test result
+    ansible.builtin.debug:
+    msg: "Automation Test Result: {{ automation_test_result }}"
