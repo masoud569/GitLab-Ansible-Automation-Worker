@@ -1,0 +1,15 @@
+---
+
+* name: Automation Worker - Failed Execution Test
+  hosts: all
+  gather_facts: false
+
+  tasks:
+
+  * name: Report test start
+    ansible.builtin.debug:
+    msg: "Automation Worker failure test started."
+
+  * name: Intentionally fail the automation
+    ansible.builtin.fail:
+    msg: "Intentional failure for Automation Worker testing."
