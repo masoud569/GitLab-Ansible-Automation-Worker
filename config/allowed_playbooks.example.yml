@@ -1,0 +1,31 @@
+# Approved Ansible Playbooks
+
+#
+
+# Copy this file to:
+
+# allowed_playbooks.yml
+
+#
+
+# Then add only the Playbooks that are explicitly approved
+
+# for execution by the Automation Worker.
+
+allowed_playbooks:
+
+# Example: install and configure an endpoint agent
+
+* endpoint_agent
+
+# Example: install and configure a monitoring agent
+
+* monitoring_agent
+
+# Example: apply operating system hardening
+
+* os_hardening
+
+# Example: install a software package
+
+* software_install
