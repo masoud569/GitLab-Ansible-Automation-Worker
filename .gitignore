@@ -1,0 +1,70 @@
+# Python
+
+**pycache**/
+*.py[cod]
+*$py.class
+*.so
+
+# Virtual environment
+
+.venv/
+venv/
+env/
+
+# Environment / secrets
+
+.env
+.env.*
+*.secret
+*.secrets
+*.token
+*.key
+*.pem
+
+# Runtime state
+
+state/
+*.state
+*.jsonl
+
+# Logs
+
+logs/
+*.log
+
+# Temporary files
+
+*.tmp
+*.temp
+*.bak
+*.backup
+
+# OS files
+
+.DS_Store
+Thumbs.db
+
+# IDE / Editor
+
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Test / Coverage
+
+.pytest_cache/
+.coverage
+htmlcov/
+.coverage.*
+.cache/
+
+# Local configuration
+
+config/*.yml
+config/*.yaml
+
+# Keep public example configurations
+
+!config/*.example.yml
+!config/*.example.yaml
